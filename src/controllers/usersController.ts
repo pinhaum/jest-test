@@ -1,7 +1,8 @@
-import { database as data } from '../database.js';
+import { Request, Response } from 'express';
+import { database as data } from '../database';
 
-const usersController = {
-  createUser(req, res) {
+export class UsersController {
+  createUser(req: Request, res: Response): Response {
     const { name } = req.body;
 
     if (name.length < 1) {
@@ -12,11 +13,9 @@ const usersController = {
 
     data.push(name);
     return res.status(201).json({ mensagem: `User ${name} criado` });
-  },
+  }
 
-  getUser(req, res) {
+  getUser(req: Request, res: Response): Response {
     return res.status(200).json(data);
-  },
-};
-
-export { usersController };
+  }
+}
