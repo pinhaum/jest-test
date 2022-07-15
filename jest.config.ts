@@ -100,7 +100,7 @@ export default {
   // notifyMode: "failure-change",
 
   // A preset that is used as a base for Jest's configuration
-  // preset: undefined,
+  preset: 'ts-jest',
 
   // Run tests from one or more projects
   // projects: undefined,
@@ -149,7 +149,7 @@ export default {
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
 
-  // Adds a location field to test results
+  // Adds a location field to test resultsr
   // testLocationInResults: false,
 
   // The glob patterns Jest uses to detect test files
